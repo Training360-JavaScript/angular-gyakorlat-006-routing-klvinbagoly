@@ -1,0 +1,26 @@
+<div class="row">
+  <div class="col-12">
+    <table class="table table-striped">
+      <thead>
+        <th>Event</th>
+        <th>Date</th>
+        <th>Time</th>
+        <th>Location</th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let event of eventList">
+          <td>{{ event.name }}</td>
+          <td>{{ event.date }}</td>
+          <td>{{ event.time }}</td>
+          <td>
+            <ul>
+              <li>{{event.location.address}}</li>
+              <li>{{event.location.city}}</li>
+              <li>{{event.location.country}}</li>
+            </ul>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
